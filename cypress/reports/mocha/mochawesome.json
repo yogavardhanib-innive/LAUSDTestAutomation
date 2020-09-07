@@ -1,0 +1,169 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-09-01T15:34:07.131Z",
+    "end": "2020-09-01T15:41:39.105Z",
+    "duration": 451974,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ac16b44f-ea3c-4ddf-9da4-8f3a865ac82f",
+      "title": "",
+      "fullFile": "cypress\\integration\\LAUSD.js",
+      "file": "cypress\\integration\\LAUSD.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c1a6de90-bcda-44c4-b326-0d0b9c791851",
+          "title": "LAUSDSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL1_login",
+              "fullTitle": "LAUSDSuite URL1_login",
+              "timedOut": null,
+              "duration": 214025,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://focusdev.lausd.net/');\nCypress.on('uncaught:exception', function (err, runnable) {\n  // returning false here prevents Cypress from\n  // failing the test\n  return false;\n});\nvar lp = new _LoginPage[\"default\"]();\nlp.login();",
+              "err": {},
+              "uuid": "ef71ab4c-adb7-4b86-b5c7-93104b51585a",
+              "parentUUID": "c1a6de90-bcda-44c4-b326-0d0b9c791851",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "URL1_Analytics",
+              "fullTitle": "LAUSDSuite URL1_Analytics",
+              "timedOut": null,
+              "duration": 3031,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var c = new _Common[\"default\"]();\nc.verifyanalyticsareas1();",
+              "err": {},
+              "uuid": "4fd47223-0566-4d50-a0d6-f7b92baba167",
+              "parentUUID": "c1a6de90-bcda-44c4-b326-0d0b9c791851",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "URL2_login",
+              "fullTitle": "LAUSDSuite URL2_login",
+              "timedOut": null,
+              "duration": 218602,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://focus.lausd.net/');\nCypress.on('uncaught:exception', function (err, runnable) {\n  // returning false here prevents Cypress from\n  // failing the test\n  return false;\n});\nvar lp = new _LoginPage[\"default\"]();\nlp.login();",
+              "err": {},
+              "uuid": "83bcf2f3-90a2-47da-b0b7-e292e6e414a4",
+              "parentUUID": "c1a6de90-bcda-44c4-b326-0d0b9c791851",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "URL2_Analytics",
+              "fullTitle": "LAUSDSuite URL2_Analytics",
+              "timedOut": null,
+              "duration": 6817,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var c = new _Common[\"default\"]();\nc.verifyanalyticsareas2();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.b-header > .container-header > .b-groups-icons > .b-icon-context:nth-child(1) > .b-icon-mask`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.b-header > .container-header > .b-groups-icons > .b-icon-context:nth-child(1) > .b-icon-mask`, but never found it.\n    at Context.eval (https://signon.lausd.net/__cypress/tests?p=cypress\\support\\index.js:136:25)",
+                "diff": null
+              },
+              "uuid": "fc049a54-6399-4f76-810e-e279f617e9e7",
+              "parentUUID": "c1a6de90-bcda-44c4-b326-0d0b9c791851",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ef71ab4c-adb7-4b86-b5c7-93104b51585a",
+            "4fd47223-0566-4d50-a0d6-f7b92baba167",
+            "83bcf2f3-90a2-47da-b0b7-e292e6e414a4"
+          ],
+          "failures": [
+            "fc049a54-6399-4f76-810e-e279f617e9e7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 442475,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

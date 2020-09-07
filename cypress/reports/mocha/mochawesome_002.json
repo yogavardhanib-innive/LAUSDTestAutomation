@@ -1,0 +1,92 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-09-01T15:42:46.130Z",
+    "end": "2020-09-01T15:42:46.859Z",
+    "duration": 729,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cdf6a248-9e07-474b-adcd-f327bbe53e58",
+      "title": "",
+      "fullFile": "cypress\\integration\\LAUSDPages\\Comparison.js",
+      "file": "cypress\\integration\\LAUSDPages\\Comparison.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "comparison",
+          "fullTitle": "comparison",
+          "timedOut": null,
+          "duration": 660,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "expect(this.d1.leadership_subject1).to.equal(this.d2.leadership_subject2);\nexpect(this.d1.instruction_subject1).to.equal(this.d2.instruction_subject2);\nexpect(this.d1.operations_subject1).to.equal(this.d2.operations_subject2);\nexpect(this.d1.specialEd_subject1).to.equal(this.d2.specialEd_subject2);\nexpect(this.d1.summary_subject1).to.equal(this.d2.summary_subject2);",
+          "err": {
+            "message": "Error: 'result1' is not valid JSON.\nParse error on line 1:\n...mmary_subject1\":\"6\"}{\"leadership_subject\n-----------------------^\nExpecting 'EOF', '}', ',', ']', got '{'\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+            "estack": "Error: 'result1' is not valid JSON.\nParse error on line 1:\n...mmary_subject1\":\"6\"}{\"leadership_subject\n-----------------------^\nExpecting 'EOF', '}', ',', ']', got '{'\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at Object.<anonymous> (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\lib\\fixture.js:135:13)\n    at Object.tryCatcher (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n    at Promise._settlePromiseFromHandler (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:547:31)\n    at Promise._settlePromise (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:604:18)\n    at Promise._settlePromise0 (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:649:10)\n    at Promise._settlePromises (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:725:18)\n    at _drainQueueStep (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:93:12)\n    at _drainQueue (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:86:9)\n    at Async._drainQueues (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:102:5)\n    at Immediate.Async.drainQueues [as _onImmediate] (C:\\Users\\PC\\AppData\\Local\\Cypress\\Cache\\5.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:15:14)\n    at processImmediate (internal/timers.js:439:21)\n",
+            "diff": null
+          },
+          "uuid": "e2f297a1-5e3d-44f5-b59a-b800aeb99980",
+          "parentUUID": "cdf6a248-9e07-474b-adcd-f327bbe53e58",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "e2f297a1-5e3d-44f5-b59a-b800aeb99980"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 660,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
