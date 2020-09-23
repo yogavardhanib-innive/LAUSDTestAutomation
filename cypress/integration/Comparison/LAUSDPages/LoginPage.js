@@ -20,7 +20,7 @@ class LoginPages {
             // failing the test
             return false
         })
-        cy.wait(200000)
+       // cy.wait(400000)
     }
 }
 export default LoginPages

@@ -1,13 +1,13 @@
-import LoginPages from '../integration/LAUSDPages/LoginPage'
-import CommonPages from '../integration/LAUSDPages/Common'
-import MMEDPages from '../integration/LAUSDPages/MMEDpage'
+import LoginPages from './Comparison/LAUSDPages/LoginPage'
+import CommonPages from './Comparison/LAUSDPages/Common'
+import MMEDPages from './Comparison/LAUSDPages/MMEDpage'
 
 describe('LAUSDSuite', function () {
 
     //Testcase 1: Base_URL login
     it("URL1_login", function () {
 
-        cy.visit('http://focus.lausd.net/')
+        cy.visit('http://focusdev.lausd.net/')
         Cypress.on('uncaught:exception', (err, runnable) => {
             // returning false here prevents Cypress from
             // failing the test
@@ -15,6 +15,7 @@ describe('LAUSDSuite', function () {
         })
         const lp = new LoginPages()
         lp.login()
+        cy.wait(160000)
     })
 
 
@@ -23,22 +24,17 @@ it("URL1_Analytics", function () {
 
 const c = new CommonPages()
 const md = new MMEDPages()
-const mmed = 'div.brintell-framework-App-container-welcome > div > div.b-subject-area > div.container-one > div > div.b-content-cards > div:nth-child(3) > div.b-icon > img'
-      const  instruction = '.b-header > .container-header > .b-groups-icons > .b-icon-context:nth-child(2) > .b-icon-mask'
-c.verifyanalyticsareas1()  
-cy.get(instruction)
-            .should('be.visible')
-            .click() 
-            cy.wait(7000)
-    cy.get(mmed)
-    .scrollIntoView()
-        .should('be.visible')
-        .click()
-        cy.wait(80000)
-       
-//md.verifyMMEDpagelaunch()
-
+const lp = new LoginPages()
+//c.verifyanalyticsareas1() 
+//c.verifysubjectstext()
+md.verifyMMEDpagelaunch()
+lp.login()
+cy.wait(20000)
+md.navigatingtommed()
+md.verifymetricsataglance()
+md.verifyprofilesummarydropdown()
 })
+
 
  //Testcase 3: Base_URL login
  it.skip("URL2_login", function () {
@@ -51,6 +47,7 @@ cy.get(instruction)
     })
     const lp = new LoginPages()
     lp.login()
+    cy.wait(160000)
 })
 
 
@@ -58,7 +55,13 @@ cy.get(instruction)
 it.skip("URL2_Analytics", function () {
 
 const c = new CommonPages()
-c.verifyanalyticsareas2()   
+//c.verifyanalyticsareas2()   
+//c.verifysubjectstext2()
+md.verifyMMEDpagelaunch()
+lp.login()
+cy.wait(20000)
+md.navigatingtommed()
+md.verifymetricsataglance()
 
 })
 })
