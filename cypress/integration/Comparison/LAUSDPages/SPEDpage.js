@@ -6,7 +6,7 @@ class SPEDPages {
 
     verifySPEDpagelaunch() {
         const SPED = '.b-header > .container-header > .b-groups-icons > .b-icon-context:nth-child(4) > .b-icon-mask'
-        cy.pagelaunch(SPED) 
+        cy.click(SPED) 
     }
     navigatingtoIEPtimelinepage() {
         const ieptimeline = 'div.b-subject-area > div.container-one > div > div.b-content-cards > div:nth-child(1) > div.b-icon > img'

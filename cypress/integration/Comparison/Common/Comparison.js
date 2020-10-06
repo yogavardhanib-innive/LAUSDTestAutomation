@@ -1,27 +1,43 @@
 
-
 beforeEach(function () {
     cy.fixture('result1').then((d1) => {
         this.d1 = d1
-
     })
 
     cy.fixture('result2').then((d2) => {
         this.d2 = d2
-
     })
 })
 
-it('analyticarealength', function () {
-
-    expect(this.d1.leadership_subject).to.equal(this.d2.leadership_subject)
-    expect(this.d1.instruction_subject).to.equal(this.d2.instruction_subject)
-    expect(this.d1.operations_subject).to.equal(this.d2.operations_subject)
-    expect(this.d1.specialEd_subject).to.equal(this.d2.specialEd_subject)
-    expect(this.d1.summary_subject).to.equal(this.d2.summary_subject)
-    
+it('TotalStudentsReport', function (){
+    cy.log('currentenrollmentcount=schoolreporcount')
+expect(this.d1.CurrentEnrollmentcount).to.equal(this.d1.SchoolReporCount)
+cy.log('currentenrollmentcount=studentreportcount')
+expect(this.d1.CurrentEnrollmentcount).to.equal(this.d1.StudentReportCount)
 
 })
+
+it.skip('analyticarealength', function () {
+
+    expect('leadership_subject='+this.d1.leadership_subject).to.equal('leadership_subject='+this.d2.leadership_subject)
+    expect('instruction_subject='+this.d1.instruction_subject).to.equal('instruction_subject='+this.d2.instruction_subject)
+    expect('operations_subject='+this.d1.operations_subject).to.equal('operations_subject='+this.d2.operations_subject)
+    expect('specialEd_subject='+this.d1.specialEd_subject).to.equal('specialEd_subject='+this.d2.specialEd_subject)
+    expect('summary_subject='+this.d1.summary_subject).to.equal('summary_subject='+this.d2.summary_subject)
+})
+
+
+it.skip('mmed', function(){
+    expect('mmedpagetitle='+this.d1.mmedpagetitle).to.equal('mmedpagetitle='+this.d2.mmedpagetitle)
+    expect('mmedpagesubtitle='+this.d1.mmedpagesubtitle).to.equal('mmedpagesubtitle='+this.d2.mmedpagesubtitle)
+    expect('metrictitle='+this.d1.metrictitle).to.equal('metrictitle='+this.d2.metrictitle)
+    expect('metrictitlecount='+this.d1.metrictitlecount).to.equal('metrictitlecount='+this.d2.metrictitlecount)
+    expect('metricdata='+this.d1.metricdata).to.equal('metricdata='+this.d2.metricdata)
+    expect('metricdatacount='+this.d1.metricdatacount).to.equal('metricdatacount='+this.d2.metricdatacount)
+})
+
+
+
 
 it.skip('analyticarea_leadership_subjecttext', function () {
 //leadership
@@ -59,6 +75,6 @@ it.skip('analyticarea_leadership_subjecttext', function () {
 
 })
 
-it('mmedtitlecomparison',function(){
+it.skip('mmedtitlecomparison',function(){
     expect(this.d1.mmedpagetitle).to.equal(this.d2.mmedpagetitle)
 })
