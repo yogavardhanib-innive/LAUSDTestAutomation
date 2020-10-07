@@ -17,6 +17,15 @@ expect(this.d1.CurrentEnrollmentcount).to.equal(this.d1.StudentReportCount)
 
 })
 
+
+it('TotalStudentsReport', function (){
+    cy.log('currentenrollmentcount=schoolreporcount')
+expect(this.d1.CurrentEnrollmentcount).to.equal(this.d1.SchoolReporCount)
+cy.log('currentenrollmentcount=studentreportcount')
+expect(this.d1.CurrentEnrollmentcount).to.equal(this.d1.StudentReportCount)
+
+})
+
 it.skip('analyticarealength', function () {
 
     expect('leadership_subject='+this.d1.leadership_subject).to.equal('leadership_subject='+this.d2.leadership_subject)
